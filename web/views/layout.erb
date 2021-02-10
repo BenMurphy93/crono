@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport"/>
+    <title>Crono Dashboard</title>
+    <link href="<%= env['SCRIPT_NAME'] %>/css/materialize.min.css" media="screen,projection" rel="stylesheet"></link>
+    <link href="<%= env['SCRIPT_NAME'] %>/css/custom.css" media="screen,projection" rel="stylesheet"></link>
+  </head>
+  <body class="blue-grey darken-2">
+    <nav class="blue-grey white-text" role="navigation">
+      <a class="brand-logo center" href="<%= url('/') %>">
+        <b>Crono</b> Dashboard
+      </a>
+    </nav>
+    <main class="container blue-grey lighten-4">
+      <%= yield %>
+      <footer class="page-footer blue-grey darken-2">
+        <div class="footer-copyright blue-grey">
+          Crono v<%= Crono::VERSION %>
+          <a class="right" href="https://github.com/plashchynski/crono" target="_blank">Documentation</a>
+        </div>
+      </footer>
+    </main>
+    <script src="<%= env['SCRIPT_NAME'] %>/js/materialize.min.js"></script>
+  </body>
+</html>

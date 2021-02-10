@@ -172,10 +172,9 @@ There are "start", "stop", and "restart" commands.
 ## Web UI
 
 Crono comes with a Sinatra application that can display the current state of Crono jobs.  
-Add `sinatra` and `haml` to your Gemfile  
+Add `sinatra` to your Gemfile  
 
 ```ruby
-gem 'haml'
 gem 'sinatra', require: nil
 ```
 

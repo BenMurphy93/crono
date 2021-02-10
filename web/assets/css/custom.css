@@ -1,19 +1,26 @@
-body {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  min-height: 100vh;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+nav {
+  position: relative;
+  z-index: 2;
+}
+nav .brand-logo {
+  font-size: 1.75em;
+  letter-spacing: -0.05em;
 }
 
 main {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 0 auto;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+main .page-footer {
+  margin: 0 -20px -20px -20px;
+}
+
+.page-footer > .footer-copyright {
+  padding: 20px;
+}
+
+.responsive-overflow {
+  overflow-x: auto;
 }

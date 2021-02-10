@@ -1,4 +1,3 @@
-require 'haml'
 require 'sinatra/base'
 require 'crono'
 
@@ -11,12 +10,12 @@ module Crono
 
     get '/' do
       @jobs = Crono::CronoJob.all
-      haml :dashboard, format: :html5
+      erb :dashboard, format: :html5
     end
 
     get '/job/:id' do
       @job = Crono::CronoJob.find(params[:id])
-      haml :job
+      erb :job
     end
   end
 end
