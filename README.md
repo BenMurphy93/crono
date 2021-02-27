@@ -1,18 +1,16 @@
 Crono — Job scheduler for Rails
 ------------------------
-[![Gem Version](https://badge.fury.io/rb/crono.svg)](http://badge.fury.io/rb/crono)
-[![Build Status](https://travis-ci.org/plashchynski/crono.svg?branch=master)](https://travis-ci.org/plashchynski/crono)
-[![Code Climate](https://codeclimate.com/github/plashchynski/crono/badges/gpa.svg)](https://codeclimate.com/github/plashchynski/crono)
-[![security](https://hakiri.io/github/plashchynski/crono/master.svg)](https://hakiri.io/github/plashchynski/crono/master)
 
 Crono is a time-based background job scheduler daemon (just like Cron) for Ruby on Rails.
+
+This here is a fork of [plashchynski/crono](https://github.com/plashchynski/crono), converted to a Rails engine, with fewer dependencies and with support for Ruby 3.0.
 
 
 ## The Purpose
 
 Currently, there is no such thing as Ruby Cron for Rails. Well, there's [Whenever](https://github.com/javan/whenever) but it works on top of Unix Cron, so you can't manage it from Ruby. Crono is pure Ruby. It doesn't use Unix Cron and other platform-dependent things. So you can use it on all platforms supported by Ruby. It persists job states to your database using Active Record. You have full control of jobs performing process. It's Ruby, so you can understand and modify it to fit your needs.
 
-![Web UI](https://github.com/plashchynski/crono/raw/master/examples/crono_web_ui.png)
+![Web UI](https://raw.githubusercontent.com/cseelus/crono/main/examples/crono_web_ui.png)
 
 
 ## Requirements
@@ -192,21 +190,11 @@ For Rails 5, in case of the errors:
 See the related issue [#52](https://github.com/plashchynski/crono/issues/52)
 
 
-## Capistrano
-
-Use the `capistrano-crono` gem ([github](https://github.com/plashchynski/capistrano-crono/)).
-
-
 ## Support
 
-Feel free to create [issues](https://github.com/plashchynski/crono/issues)
-
-
-## Known Issues
-
-* Is not compatible with the `protected_attributes` gem. See: [https://github.com/plashchynski/crono/issues/43](https://github.com/plashchynski/crono/issues/43)
+Feel free to create [issues](https://github.com/cseelus/crono/issues)
 
 
 ## License
 
-Please see [LICENSE](https://github.com/plashchynski/crono/blob/master/LICENSE) for licensing details.
+Please see [LICENSE](https://github.com/cseelus/crono/blob/master/LICENSE) for licensing details.
