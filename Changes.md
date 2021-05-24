@@ -1,3 +1,13 @@
+2.0.1
+-----------
+- Changes to Web UI colouring - moved to a dark mode-esque feel
+- Removed "log" link from Jobs index and added the link to Job ID
+- Ordered the Jobs index by last performed at, descending
+- Split the jobs index job id into 2 columns to provide better job context
+- Fixed :memory filename to allow the gem to work with windows (version tidyup)
+- JS added to autoscroll to the bottom of logs
+- Added a link back to the main app within layout (uses Rails.application.class to get App name)
+
 2.0.0
 -----------
 - Converted this gem to a proper Rails engine

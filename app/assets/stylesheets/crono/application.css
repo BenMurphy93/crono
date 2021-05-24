@@ -22,9 +22,57 @@ main .page-footer {
 }
 
 .responsive-overflow {
-  overflow-x: auto;
+  max-height: 60vh;
+  overflow: auto;
 }
 
 .nowrap {
   white-space: nowrap;
+}
+
+.wfa-link {
+  transition: 0.3s;
+  font-weight: 650;
+  color: #fff;
+}
+
+.wfa-link:hover {
+  transition: 0.3s;
+  color: #8B5CF6;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.7rem;
+  height: 0.7rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05); 
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: var(1px);
+  border-radius: 1rem;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-width: 0.4rem;
+  border-radius: 1rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4); 
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+  border-width: 0.4rem;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.pl20 {
+	padding-left: 20px !important;
 }

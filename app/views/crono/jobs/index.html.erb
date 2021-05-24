@@ -1,31 +1,36 @@
 <header>
-  <h4>Running Jobs</h4>
+  <h5 class="center-align"><b>Jobs</b></h5>
 </header>
 
 <div class="responsive-overflow">
   <table id="job_list">
     <tr>
       <th>Job</th>
-      <th>Last performed at</th>
+      <th>Frequency</th>
+      <th>Last performed</th>
       <th>Status</th>
-      <th></th>
     </tr>
-    <% @jobs.each do |job| %>
+    <% @jobs.order(last_performed_at: :desc).each do |job| %>
       <tr>
         <td>
-          <%= job.job_id %>
+          <%= link_to job_path(job), class: 'wfa-link' do %>
+            <%= job.job_id.split("Perform").last.split("every").first %>
+          <% end %>
         </td>
         <td>
-          <%= job.last_performed_at || 'Never performed yet' %>
+            <%= job.job_id.split("every").last %>
+        </td>
+        <td>
+          <%= (DateTime.parse(job.last_performed_at.to_s).strftime("%d %B %Y %H:%M:%S") if job.last_performed_at.present?) || 'Not yet performed' %>
         </td>
         <td>
           <% if job.last_performed_at.nil? %>
-            <span class="grey-text darken-3 nowrap" title="This job has never been performed yet.">
+            <span class="white-text nowrap" title="This job has never been performed yet.">
               ◷ Pending
             </span>
           <% elsif job.healthy %>
             <a href="<%= job_path(job) %>">
-              <span class="green-text darken-3 nowrap" title="This job was performed successfully.">
+              <span class="green-text nowrap" title="This job was performed successfully.">
                 ✔ Success
               </span>
             </a>
@@ -34,13 +39,6 @@
               <span class="red-text nowrap" title="There were problems with this job. Follow the link to check the log.">
                 ⚠ Error
               </span>
-            </a>
-          <% end %>
-        </td>
-        <td>
-          <% if job.last_performed_at %>
-            <a href="<%= job_path(job) %>" class="right nowrap">
-              Log ›
             </a>
           <% end %>
         </td>

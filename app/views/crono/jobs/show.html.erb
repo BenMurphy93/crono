@@ -1,8 +1,10 @@
-<header class="blue-grey lighten-4 grey-text text-darken-4">
-  <a href="<%= root_url %>">
-    ‹ Back to Home
-  </a>
-  <h4>Last log of <i><%= @job.job_id %></i>:</h4>
+<header>
+  <%= link_to root_url, class: 'wfa-link' do %>
+    &larr; Back
+  <% end %>
+  <div class="row">
+    <h5 class="center-align margin-bottom-10"><b><%= @job.job_id %></b></h5>
+  </div>
 </header>
 <% if @job.healthy == false %>
   <div class="row red-text">
@@ -13,4 +15,11 @@
     </div>
   </div>
 <% end %>
-<pre class="responsive-overflow"><%= @job.log %></pre>
+<hr>
+<pre id="job_log" class="responsive-overflow"><%= @job.log %></pre>
+
+<script>
+  // scrolls down to the bottom of the pre section
+  var logs = document.getElementById("job_log");
+  logs.scrollTop = logs.scrollHeight;
+</script>
