@@ -8,6 +8,7 @@
 - JS added to autoscroll to the bottom of logs
 - Added a link back to the main app within layout (uses Rails.application.class to get App name)
 
+
 2.0.0
 -----------
 - Converted this gem to a proper Rails engine
