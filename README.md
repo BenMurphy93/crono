@@ -3,7 +3,7 @@ Crono — Job scheduler for Rails
 
 Crono is a time-based background job scheduler daemon (just like Cron) for Ruby on Rails.
 
-This is a fork of [cseelus/crono](https://github.com/cseelus/crono), who did some brilliant work getting Crono compatible with Ruby 3.0 and converting Crono to a proper Rails Engine. All I've done is some QOL changes to the Web UI.
+This is a fork of [cseelus/crono](https://github.com/cseelus/crono), who did some brilliant work getting Crono compatible with Ruby 3.0 and converting Crono to a proper Rails Engine. All I've done is some QOL changes to the Web UI and changed a file name so Windows will play nicely.
 [cseelus/crono](https://github.com/cseelus/crono) is a fork of [plashchynski/crono](https://github.com/plashchynski/crono).
 
 
