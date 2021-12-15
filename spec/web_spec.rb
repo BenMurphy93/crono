@@ -52,7 +52,7 @@ describe Crono::Engine do
     end
 
     it 'should show a message about the unhealthy job' do
-      message = 'An error occurs during the last execution of this job'
+      message = 'An error occured during the last execution of this job'
       @test_job.update(healthy: false)
       get "/jobs/#{@test_job.id}"
       expect(last_response.body).to include message

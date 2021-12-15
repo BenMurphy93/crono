@@ -43,6 +43,12 @@ Now you are ready to move forward to create a job and schedule it.
 
 ## Usage
 
+### A note for Docker
+
+We noticed the somewhat irregular occurrence of the Crono process becoming stagnant within containers when initialising via an Entrypoint.  
+Don't initialise Crono via an Entrypoint. If you're giving Crono its own Container and process (in which case see [Run as a daemon](#run-as-a-daemon), you should be good.)  
+If you're intending to run your app and Crono in the same Pod you're going to want to follow [this](https://docs.docker.com/config/containers/multi-service_container/).  
+
 #### Create Job
 
 Crono can use Active Job jobs from `app/jobs/`. The only requirement is that the `perform` method should take no arguments.
